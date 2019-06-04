@@ -1,0 +1,21 @@
+{% extends 'adminapp/base.html' %}
+{% load staticfiles %}
+
+{% block menu %}
+{% endblock %}
+
+{% block container %}
+    <div class="product-delete">
+        Уверены, что хотите удалить <b>{{ object.name }}</b>?
+        <div class="del-user">
+            <form method="post">
+            {% csrf_token %}
+            <input class="btn btn-danger" type="submit" value="удалить">
+            </form>
+            <a href="{% url 'myadmin:products' category.pk %}" class="btn btn-success">
+                отмена
+            </a>
+        </div>
+
+    </div>
+{% endblock %}

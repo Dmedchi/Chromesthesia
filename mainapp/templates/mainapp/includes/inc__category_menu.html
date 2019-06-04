@@ -1,0 +1,8 @@
+<div class="link-menu">
+    {% for category in links_menu %}
+        <a href="{% url 'main:category' category.pk 1 %}"
+           class="{% if request.resolver_match.kwargs.pk == category.pk %}active{% endif %}">
+            {{ category.name }}
+        </a>
+    {% endfor %}
+</div>

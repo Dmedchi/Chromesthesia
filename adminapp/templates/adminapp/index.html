@@ -1,0 +1,54 @@
+{% extends 'adminapp/base.html' %}
+{% load staticfiles %}
+{% load my_tags %}
+
+
+{% block container %}
+    <a href="{% url 'myadmin:shopuser_create' %}"
+       class="btn btn-primary new-user">
+        новый пользователь
+    </a>
+    <div class="users-list">
+        {% for object in object_list %}
+            <div class="user-record {% if not object.is_active %}not-active{% endif %}">
+                <div class="img-for-object">
+                    <img src="{{ object.avatar|media_folder_users }}"
+                     alt="{{ object.username }}">
+                </div>
+                <div class="user-role">
+                    {% if object.is_superuser %}администратор{% else %}пользователь{% endif %}
+                    <a href="{% url 'myadmin:shopuser_update' object.pk %}" class="btn btn-success">
+                        редактировать
+                    </a>
+                    <a href="{% url 'myadmin:shopuser_delete' object.pk %}" class="btn btn-danger">
+                        удалить
+                    </a>
+                </div>
+                <div class="user-name">
+                    <p><strong>{{ object.username }}</strong></p>
+                    <p>
+                        {% if object.first_name %}
+                            <b>{{ object.first_name|title }}</b>
+                            {% if object.last_name %}
+                                <p>{{ object.last_name|title }}</p>
+                            {% endif %}
+                        {% endif %}
+                    </p>
+                </div>
+                <div class="user-age">
+                    age:<br>
+                    {{ object.age }} лет
+                </div>
+                <div class="user-email">
+                    email:<br>
+                    {{ object.email }}
+                </div>
+                <div class="user-lastlogin">
+                    logged:<br>
+                    {{ object.last_login }}
+                </div>
+            </div>
+        {% endfor%}
+    </div>
+
+{% endblock %}

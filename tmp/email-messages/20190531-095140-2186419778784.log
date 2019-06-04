@@ -1,0 +1,14 @@
+Content-Type: text/plain; charset="utf-8"
+MIME-Version: 1.0
+Content-Transfer-Encoding: 8bit
+Subject: 
+ =?utf-8?b?0J/QvtC00YLQstC10YDQttC00LXQvdC40LUg0YPRh9C10YLQvdC+0Lkg0LfQsNC/?=
+ =?utf-8?b?0LjRgdC4IHVzZXIx?=
+From: django@geekshop.local
+To: lisa@gb.info
+Date: Fri, 31 May 2019 06:51:40 -0000
+Message-ID: <155928550085.9292.6076575525595440184@AngelDevil2>
+
+Для подтверждения учетной записи user1 на портале     http://localhost:8000 перейдите по ссылке: 
+ http://localhost:8000/auth/verify/lisa@gb.info/da41d0325c46525fd55957ce4413606473cb8635/
+-------------------------------------------------------------------------------

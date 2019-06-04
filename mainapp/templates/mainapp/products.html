@@ -1,0 +1,65 @@
+{% extends 'mainapp/base.html' %}
+{% load staticfiles %}
+{% load my_tags %}
+
+<body>
+
+    {% block header %}
+        <div class="header">
+            <div class="container headerWrapper">
+                {% include 'mainapp/includes/inc__main_menu.html' %}
+            </div>
+        </div>
+    {% endblock %}
+
+    {% block content %}
+        <div class="content">
+            <div class="container contentWrapper">
+                {% include 'mainapp/includes/inc__category_menu.html' %}
+
+                <div class="details-products">
+
+                    <div class="hotProduct">
+
+                        <div class="productItem">
+                            <a href="{% url 'main:product' hot_product.pk %}">
+                                <img src="{{ hot_product.image|media_folder_products }}" alt="{{ hot_product.name }}">
+                            </a>
+                        </div>
+
+                        <div class="hotProduct-text">
+                            <div class="sale-block">
+                                <h3><span>Горячее предложение</span></h3>
+                            </div>
+                            <h2>{{ hot_product.name }}</h2>
+                            <h2 class="hotPrice">{{ hot_product.price }} ₽</h2>
+                            <a href="{% url 'basket:add' hot_product.pk %}" class="button">В корзину</a>
+                        </div>
+                    </div>
+                    <div class="sameProducts">
+                        <div class="sameProducts-text">
+                            <h2>Похожие товары</h2>
+                        </div>
+
+                        <div class="sameProducts-wrap">
+                            {% for item in same_products %}
+                                <div class="productItem same-product">
+                                    <a href="{% url 'main:product' item.pk %}">
+                                        <img src="{{ item.image|media_folder_products }}" alt="{{ item.name }}">
+                                    </a>
+                                    <div class="productList">
+                                        <h3>{{ item.name }}</h3>
+                                    </div>
+                                </div>
+                            {% endfor %}
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    {% endblock %}
+</body>

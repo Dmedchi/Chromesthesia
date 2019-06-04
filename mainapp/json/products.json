@@ -1,0 +1,65 @@
+[
+  {
+    "category": "Накладные наушники",
+    "name": "Beats Solo3",
+    "image": "products_images/product_1.jpg",
+    "price": "23555",
+    "quantity": "10"
+  },
+  {
+    "category": "Накладные наушники",
+    "name": "Beats Solo3 Incendiary Purple",
+    "image": "products_images/product_2.jpg",
+    "price": "22888",
+    "quantity": "7"
+  },
+  {
+    "category": "Накладные наушники",
+    "name": "Beats Solo3 Incendiary Blue",
+    "image": "products_images/product_3.jpg",
+    "price": "20868",
+    "quantity": "5"
+  },
+  {
+    "category": "Наушники-вкладыши",
+    "name": "urBeats3 Coral с разъёмом Lightning",
+    "image": "products_images/product_4.jpg",
+    "price": "15956",
+    "quantity": "5"
+  },
+  {
+    "category": "Наушники-вкладыши",
+    "name": "urBeats3 с разъёмом Lightning, Yellow",
+    "image": "products_images/product_5.jpg",
+    "price": "13966",
+    "quantity": "6"
+  },
+  {
+    "category": "Наушники-вкладыши",
+    "name": "urBeats3 с разъёмом Lightning, Blue",
+    "image": "products_images/product_6.jpg",
+    "price": "12756",
+    "quantity": "5"
+  },
+  {
+    "category": "Наушники-вкладыши",
+    "name": "Powerbeats3, коллекция Beats Pop",
+    "image": "products_images/product_7.jpg",
+    "price": "16996",
+    "quantity": "2"
+  },
+  {
+    "category": "Наушники-вкладыши",
+    "name": "Powerbeats3 Incendiary Indigo",
+    "image": "products_images/product_8.jpg",
+    "price": "16900",
+    "quantity": "1"
+  },
+  {
+    "category": "Наушники-вкладыши",
+    "name": "Powerbeats3 Incendiary Purple",
+    "image": "products_images/product_9.jpg",
+    "price": "16656",
+    "quantity": "2"
+  }
+]

@@ -1,0 +1,14 @@
+Content-Type: text/plain; charset="utf-8"
+MIME-Version: 1.0
+Content-Transfer-Encoding: 8bit
+Subject: 
+ =?utf-8?b?0J/QvtC00YLQstC10YDQttC00LXQvdC40LUg0YPRh9C10YLQvdC+0Lkg0LfQsNC/?=
+ =?utf-8?b?0LjRgdC4IEx1c3k=?=
+From: django@geekshop.local
+To: lusy@gb.in
+Date: Mon, 20 May 2019 01:40:03 -0000
+Message-ID: <155831640393.16948.10363145359181302121@AngelDevil2>
+
+Для подтверждения учетной записи Lusy на портале     http://localhost:8000 перейдите по ссылке: 
+ http://localhost:8000/auth/verify/lusy@gb.in/1782a9d91fbb409f9ec87c989d3f8ab56a787821/
+-------------------------------------------------------------------------------

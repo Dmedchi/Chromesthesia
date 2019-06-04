@@ -1,0 +1,19 @@
+{% load staticfiles %}
+
+<ul class="menu-in-admin">
+    <li>
+        <a href="{% url 'main:index' %}">home</a>
+    </li>
+    <li>
+        <a href="{% url 'myadmin:index' %}"
+           class="{% if request.resolver_match.url_name == 'index' %}active{% endif %}">
+            users
+        </a>
+    </li>
+    <li>
+        <a href="{% url 'myadmin:categories' %}"
+           class="{% if request.resolver_match.url_name == 'categories' or category.name %}active{% endif %}">
+            categories{% if category %}: <span>{{ category.name }}</span>{% endif %}
+        </a>
+    </li>
+</ul>

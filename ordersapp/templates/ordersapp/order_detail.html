@@ -1,0 +1,32 @@
+{% extends "ordersapp/base.html" %}
+{% load staticfiles %}
+{% load my_tags %}
+
+{% block container %}
+    {% include 'ordersapp/includes/inc__order_summary.html' %}
+    <div class="basket-list">
+        {% for item in object.orderitems.select_related %}
+            <div class="basket-record">
+                <div class="img-for-item">
+                    <img src="{{ item.product.image|media_folder_products }}" alt="{{ item.product.name }}">
+                </div>
+                <div class="category-name">
+                    {{ item.product.category.name }}
+                </div>
+                <div class="product-name">
+                    {{ item.product.name }}
+                </div>
+                <div class="product-price">
+                    {{ item.product.price }}&nbsp₽
+                </div>
+                <div class="count-fo-item">
+                    x {{ item.quantity }} шт.
+                </div>
+                <div class="product-cost">
+                    = {{ item.get_product_cost }}&nbsp₽
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+    {% include 'ordersapp/includes/inc__order_actions.html' %}
+{% endblock %}

@@ -1,0 +1,42 @@
+{% extends 'mainapp/base.html' %}
+{% load staticfiles %}
+
+<body>
+
+    {% block header %}
+        <div class="header">
+            <div class="container headerWrapper">
+                {% include 'mainapp/includes/inc__main_menu.html' %}
+            </div>
+        </div>
+    {% endblock %}
+
+    {% block content %}
+        <div class="content">
+        <div class="container contentWrapper">
+            <form action="contacts.html" method="post">
+                <fieldset>
+                    <legend>write to us</legend>
+                    <input type="text" placeholder="Enter your name"><br>
+                    <input class="email" type="email" placeholder="Enter your email"><br>
+                    <input type="text" placeholder="Message subject"><br>
+                    <label class="labelInContacts" for="msg">The essence of your letter:</label><br>
+                    <textarea id="msg" name="textareaContent"></textarea><br>
+                    <button class="btn">send</button>
+                </fieldset>
+            </form>
+            <div class="addressForm">
+                <h2>Address</h2>
+                <div class="address">
+                    <b>Phone:</b> +7(812)000-11-22<br>
+                    <b>Address:</b> St. Petersburg, Moika Emb, 32<br>
+                    <b>Email:</b> сhromesthesia@shop.com
+                </div>
+            </div>
+            <div class="map">
+                <script async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Aea59ab81fda119f09b6e6e5eb5ceac667dc6ad47b675cab5fe52bdd452e22a27&amp;width=100%25&amp;height=374&amp;lang=ru_RU&amp;scroll=true"></script>
+            </div>
+        </div>
+    </div>
+    {% endblock %}
+</body>

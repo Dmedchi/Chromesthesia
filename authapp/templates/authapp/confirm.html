@@ -1,0 +1,12 @@
+{% extends 'authapp/base.html' %}
+{% load staticfiles %}
+
+{% block container %}
+    {% if user %}
+        <div class="confirm">
+            Для подтверждения регистрации Вам на почту отправлено сообщение.
+        </div>
+    {% else %}
+        <h3>ошибка отправки сообщения</h3>
+    {% endif %}
+{% endblock %}

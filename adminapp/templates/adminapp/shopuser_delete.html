@@ -1,0 +1,27 @@
+{% extends 'adminapp/base.html' %}
+{% load staticfiles %}
+
+{% block menu %}
+{% endblock %}
+
+{% block container %}
+    <div class="user-delete">
+        Уверены, что хотите удалить <b>{{ user_to_delete.username }}
+        {% if user_to_delete.first_name %}
+            ({{ user_to_delete.first_name|title }}
+                {% if user_to_delete.last_name %}
+                    {{ user_to_delete.last_name|title }}
+                {% endif %})
+        {% endif %}</b>?
+        <div class="del-user">
+            <form method="post">
+            {% csrf_token %}
+            <input class="btn btn-danger" type="submit" value="удалить">
+            </form>
+            <a href="{% url 'myadmin:index' %}" class="btn btn-success">
+                отмена
+            </a>
+        </div>
+
+    </div>
+{% endblock %}

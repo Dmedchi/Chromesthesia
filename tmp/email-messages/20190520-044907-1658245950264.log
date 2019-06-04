@@ -1,0 +1,14 @@
+Content-Type: text/plain; charset="utf-8"
+MIME-Version: 1.0
+Content-Transfer-Encoding: 8bit
+Subject: 
+ =?utf-8?b?0J/QvtC00YLQstC10YDQttC00LXQvdC40LUg0YPRh9C10YLQvdC+0Lkg0LfQsNC/?=
+ =?utf-8?b?0LjRgdC4IE9sZWc=?=
+From: django@geekshop.local
+To: oleg@gb.info
+Date: Mon, 20 May 2019 01:49:07 -0000
+Message-ID: <155831694708.13260.6548865716168843736@AngelDevil2>
+
+Для подтверждения учетной записи Oleg на портале     http://localhost:8000 перейдите по ссылке: 
+ http://localhost:8000/auth/verify/oleg@gb.info/9f3bf56b628d6e3e4899660644aa019a3276e9ba/
+-------------------------------------------------------------------------------

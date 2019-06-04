@@ -1,0 +1,14 @@
+{% extends 'authapp/base.html' %}
+{% load staticfiles %}
+
+{% block container %}
+    {% if user %}
+        <div class="verification">Поздравляем!</div>
+        <h4>Пользователь <b>{{user.username}}</b> подтвержден.</h4>
+    {% else %}
+        <h3>Верификация не пройдена.</h3>
+    {% endif %}
+    <div class="go-to-main">
+        <a href="{% url 'main:index' %}">на главную</a>
+    </div>
+{% endblock %}

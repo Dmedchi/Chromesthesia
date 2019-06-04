@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+{% load staticfiles %}
+<html lang="ru">
+    <head>
+        <meta charset="UTF-8">
+        <title>
+            {% block title %}
+                Chromesthesia / {{ title|default:"page"|title }}
+            {% endblock %}
+        </title>
+        {% block css %}
+            <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+            <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+            <link rel="stylesheet" href="{% static 'css/style.css' %}">
+        {% endblock %}
+
+        {% block js %}
+            <script src="{% static 'js/jquery-3.2.1.min.js' %}"></script>
+            <script src="{% static 'js/bootstrap.min.js' %}"></script>
+        {% endblock %}
+    </head>
+
+    <body>
+        {% block header %}
+        {% endblock %}
+
+        {% block content %}
+        {% endblock %}
+
+        {% block container %}
+        {% endblock %}
+
+        <div class="footer">
+            <div class="container footerUpWrapper">
+                {% if columns %}
+                    {% for col in columns %}
+                        <div class="footerColumn">
+                            <div class="headColumn">
+                                {{ col.title }}
+                            </div>
+                            <div class="textColumn">
+                                <a href="#">{{ col.href1 }}</a>
+                                <a href="#">{{ col.href2 }}</a>
+                                <a href="#">{{ col.href3 }}</a>
+                                <a href="#">{{ col.href4 }}</a>
+                                <a href="#">{{ col.href5 }}</a>
+                                <a href="#">{{ col.href6 }}</a>
+                            </div>
+                        </div>
+                    {% endfor %}
+                {% else %}
+                    <b>Server Error. Try Later</b>
+                {% endif %}
+                <div class="footerColumn newsLetter">
+                    <div class="headColumn">
+                        Newsletter
+                    </div>
+                    <div class="columnNewsLetter">
+                        <div class="textNewsLetter">
+                            Join thousands of other people subs-<br>
+                            cribe to our news
+                        </div>
+                        <input type="email" placeholder="insert email">
+                        <button>SUBMIT</button>
+                        <div class="payCards">
+                            <img src="{% static 'img/payCards/aex.png' %}" alt="">
+                            <img src="{% static 'img/payCards/mastercard.png' %}" alt="">
+                            <img src="{% static 'img/payCards/maestero.png' %}" alt="">
+                            <img src="{% static 'img/payCards/paypal.png' %}" alt="">
+                            <img src="{% static 'img/payCards/discover.png' %}" alt="">
+                            <img src="{% static 'img/payCards/visa_straight.png' %}" alt="">
+                        </div>
+                    </div>
+                </div>
+                <div class="footerColumn aboutUs">
+                    <div class="headColumn">
+                        About Us
+                    </div>
+                    <div class="columnAboutUs">
+                        <div class="textAboutUs">
+                            Lorem ipsum dolor sit amet,
+                            consectetuer adipiscing elit. Cum sociis
+                            natoque penatibus et magnis dis parturient
+                            montes, nascetur ridiculus mus. Donec
+                            quam felis, ultricies nec, pellentesque eu,
+                            pretium quis, sem.
+                        </div>
+                        <div class="phone">
+                            Phone: 1-999-342-9876
+                        </div>
+                        <div class="mail">
+                            e-mail: info@chromesthesia.com
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footerDown">
+            <div class="container footerDownWrapper">
+                <div class="allRights">
+                     &copy; 2019  CHROMESTHESIA. All rights reserved.
+                </div>
+                <div class="socialIcons">
+                    <i class="fab fa-facebook-f"></i>
+                    <i class="fab fa-twitter"></i>
+                    <i class="fab fa-pinterest-p"></i>
+                    <i class="fab fa-google-plus"></i>
+                    <i class="fab fa-tumblr-square"></i>
+                    <i class="fab fa-instagram"></i>
+                    <i class="fab fa-feed"></i>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

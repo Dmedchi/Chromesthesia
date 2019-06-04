@@ -1,0 +1,14 @@
+Content-Type: text/plain; charset="utf-8"
+MIME-Version: 1.0
+Content-Transfer-Encoding: 8bit
+Subject: 
+ =?utf-8?b?0J/QvtC00YLQstC10YDQttC00LXQvdC40LUg0YPRh9C10YLQvdC+0Lkg0LfQsNC/?=
+ =?utf-8?b?0LjRgdC4IGdv?=
+From: django@geekshop.local
+To: go@g.gf
+Date: Mon, 20 May 2019 01:30:52 -0000
+Message-ID: <155831585218.17508.8006219361411756881@AngelDevil2>
+
+Для подтверждения учетной записи go на портале     http://localhost:8000 перейдите по ссылке: 
+ http://localhost:8000/auth/verify/go@g.gf/d0db3d9c07f16ac2724e93471867e8821518f2b9/
+-------------------------------------------------------------------------------

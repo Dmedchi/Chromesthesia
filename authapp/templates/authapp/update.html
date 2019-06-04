@@ -1,0 +1,15 @@
+{% extends 'authapp/base.html' %}
+{% load staticfiles %}
+
+{% block container %}
+    <form class="form-horizontal" method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        {{ form.as_p }}
+        {{ profile_form.as_p }}
+        <br>
+        <input class="form-control" type="submit" value="сохранить">
+    </form>
+    <a href="{% url 'main:index' %}" class="btn btn-round form-control">
+        на главную
+    </a>
+{% endblock %}

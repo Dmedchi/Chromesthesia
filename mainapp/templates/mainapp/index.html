@@ -1,0 +1,29 @@
+{% extends 'mainapp/base.html' %}
+{% load staticfiles %}
+
+<body>
+{% block header %}
+    <div class="header">
+        <div class="headerIndex">
+            <div class="container headerWrapper">
+                {% include 'mainapp/includes/inc__main_menu.html' %}
+                <div class="drDre">
+                    <div class="drDreHeader">
+                        Beats by Dr.Dre(Beats)
+                    </div>
+                    <div class="drDreText">
+                        the leading brand in the music world created by dr.Dre and Jimmy Iovine in 2006.
+                        The company produces the best headband headphones, in-ear headphones and speakers.
+                        The main difference between Beats products is the amazing sound quality.
+                    </div>
+                </div>
+                <div class="companyBeats">
+                    The company Beats brought listening to music on a whole new level.
+                    Now music lovers around the world can feel the emotions,
+                    energy and excitement that the musicians experienced in the recording studio.
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
+</body>

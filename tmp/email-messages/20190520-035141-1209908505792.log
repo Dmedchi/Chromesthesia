@@ -1,0 +1,14 @@
+Content-Type: text/plain; charset="utf-8"
+MIME-Version: 1.0
+Content-Transfer-Encoding: 8bit
+Subject: 
+ =?utf-8?b?0J/QvtC00YLQstC10YDQttC00LXQvdC40LUg0YPRh9C10YLQvdC+0Lkg0LfQsNC/?=
+ =?utf-8?b?0LjRgdC4IE1hcmdl?=
+From: django@geekshop.local
+To: marge@gb.info
+Date: Mon, 20 May 2019 00:51:41 -0000
+Message-ID: <155831350196.12320.1127109885997695789@AngelDevil2>
+
+Для подтверждения учетной записи Marge на портале     http://localhost:8000 перейдите по ссылке: 
+ http://localhost:8000/auth/verify/marge@gb.info/ec35231f3c33ce7464be103094d13503aa60c727/
+-------------------------------------------------------------------------------

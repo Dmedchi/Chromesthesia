@@ -1,0 +1,63 @@
+{% extends 'mainapp/base.html' %}
+{% load staticfiles %}
+{% load my_tags %}
+
+
+<body>
+
+    {% block header %}
+        <div class="header">
+            <div class="container headerWrapper">
+                {% include 'mainapp/includes/inc__main_menu.html' %}
+            </div>
+        </div>
+    {% endblock %}
+
+    {% block content %}
+        <div class="content">
+            <div class="container contentWrapper">
+                {% include 'mainapp/includes/inc__category_menu.html' %}
+
+                <div class="products_list">
+                    <div class="title clearfix">
+                        <h2>Категория: "{{ category.name|title }}"</h2>
+
+                        <div class = "paginator">
+                            {% if products.has_previous %}
+                                <a href = "{% url 'main:category' category.pk products.previous_page_number %}">
+                                    <strong><< </strong>
+                                </a>
+                            {% endif %}
+                            <span class = "current">
+                                страница {{ products.number }} из {{ products.paginator.num_pages }}
+                            </span>
+                            {% if products.has_next %}
+                                <a href = "{% url 'main:category' category.pk products.next_page_number %}" >
+                                    <strong> >></strong>
+                                </a>
+                            {% endif %}
+                        </div>
+                    </div>
+
+                    <div class="products">
+
+                        {% for product in products %}
+                            <div class="productItem">
+                                <a href="{% url 'main:product' product.pk %}">
+                                    <img src="{{ product.image|media_folder_products }}" alt="{{ product.name }}">
+                                </a>
+                                <div class="productList">
+                                    <h3>{{ product.name }}</h3>
+                                    <span class="price">₽ {{ product.price }}</span>
+                                    <a href="{% url 'basket:add' product.pk %}" class="button">В корзину</a>
+                                </div>
+                            </div>
+                        {% endfor %}
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    {% endblock %}
+</body>

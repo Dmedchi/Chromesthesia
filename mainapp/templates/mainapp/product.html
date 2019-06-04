@@ -1,0 +1,43 @@
+{% extends 'mainapp/base.html' %}
+{% load staticfiles %}
+{% load my_tags %}
+
+<body>
+
+    {% block header %}
+        <div class="header">
+            <div class="container headerWrapper">
+                {% include 'mainapp/includes/inc__main_menu.html' %}
+            </div>
+        </div>
+    {% endblock %}
+
+    {% block content %}
+        <div class="content">
+            <div class="container contentWrapper">
+                {% include 'mainapp/includes/inc__category_menu.html' %}
+                <div class="details-products">
+
+                    <div class="choiceProduct">
+
+                        <div class="productItem">
+                            <a href="{% url 'main:product' object.pk %}">
+                                <img src="{{ object.image|media_folder_products }}" alt="{{ object.name }}">
+                            </a>
+                        </div>
+
+                        <div class="choiceProduct-text">
+                            <div class="sale-block">
+                                <h3><span>{{ object.name }}</span></h3>
+                            </div>
+                            <h2>Качество звука на новом уровне.</h2>
+                            <h2 class="choicePrice">{{ object.price }} ₽</h2>
+                            <a href="{% url 'basket:add' object.pk %}" class="button">В корзину</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    {% endblock %}
+
+</body>
